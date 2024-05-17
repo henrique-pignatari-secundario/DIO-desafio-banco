@@ -1,9 +1,13 @@
 package org.banco;
 
+import lombok.AccessLevel;
+import lombok.Getter;
 import org.banco.exceptions.SaldoInsuficienteException;
 import org.banco.exceptions.ValorNegativoException;
 
+@Getter
 public class ContaCorrente extends Conta{
+    @Getter(AccessLevel.NONE)
     private final double CREDITO_PADRAO = 1000;
 
     private double credito;

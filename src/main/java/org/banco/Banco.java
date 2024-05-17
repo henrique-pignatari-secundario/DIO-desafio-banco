@@ -6,11 +6,11 @@ public class Banco {
     private String nome;
     private List<Conta> contas;
 
-    public String getNome() {
-        return nome;
+    public Conta adicioanarContaCorrente(Cliente cliente){
+        return new ContaCorrente(cliente);
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Conta adicionarContaPupanca(Cliente cliente){
+        return new ContaPoupanca(cliente);
     }
 }
